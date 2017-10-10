@@ -1,0 +1,20 @@
+; Change these if you ever switch to having multiple banks
+#bs 0
+#bankcount 1
+
+#slot 0 DefaultSlot
+#slot 0 TopSlot
+
+#group 0 DefaultSlot Default
+
+; Memory regions
+#region $0000 $00FF fast
+#region $0250 $7BFF slow
+
+; globals provided by Standard Interrupts
+#global $00 BYTE g_NMICount
+#global $250 WORD g_NMIHandler
+#global $252 WORD g_IRQHandler
+#global $254 WORD g_BRKHandler
+; the standard AwaitNMI location
+#globalalias AwaitNMI $ffc1

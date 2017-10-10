@@ -1,0 +1,8 @@
+.INCLUDE "obj/common"
+
+.ORGA $F800
+.BANK 0 SLOT hubris_Slot_TopSlot_slot
+.SECTION "!InitImage" SIZE 2048 FORCE
+; change this to etinit.bin when you're ready to release
+.INCBIN "ars-init/bin/nullinit.bin"
+.ENDS

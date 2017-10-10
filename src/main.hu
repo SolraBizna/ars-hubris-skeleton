@@ -1,0 +1,26 @@
+#routine Main ENTRY ORGA $8000 GROUP Default
+#begin
+
+	; Your code goes here!
+
+	; Example code:
+
+	; Start making a square wave in voice 0
+	LDA #$10
+	STA r_VoiceWaveform+0
+	LDA #$10
+	STA r_VoiceVolume+0
+
+	; Sweep from lowish to highish frequencies, forever
+	; (We "accidentally" affect the hardware sweep bits as well)
+-	CLC
+	LDA r_VoiceRateLo+0
+	ADC #$40
+	STA r_VoiceRateLo+0
+	BCC +
+	INC r_VoiceRateHi+0
++	; Use JSR and not #call because this is not a Hubris routine
+	JSR AwaitNMI
+	BRA -
+
+#endroutine NORETURN

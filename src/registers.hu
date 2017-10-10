@@ -1,0 +1,50 @@
+; PPU registers
+#global $200 BYTE r_BGScrollX
+#global $201 BYTE r_BGScrollY
+#global $202 BYTE r_Multi
+#global $203 WORD r_BGTileBases
+#global $205 BYTE r_SPPalettes
+#global $206 4    r_BGPalettes
+#global $20A 4    r_BGFG
+#global $20E BYTE r_OLPalette
+#global $20F BYTE r_ColorMod
+#global $210 BYTE r_VRAMPage
+#global $211 BYTE r_VRAMPort
+#global $212 BYTE r_CRAMIndex
+#global $213 BYTE r_CRAMPort
+#global $214 BYTE r_SSMIndex
+#global $215 BYTE r_SSMPort
+#global $216 BYTE r_SAMIndex
+#global $217 BYTE r_SAMPort
+#global $218 BYTE r_VRAMIndex
+#global $219 BYTE r_IRQScanline
+#global $21A BYTE r_VRAMDMA
+#global $21B BYTE r_VRAMSplatDMA
+#global $21C BYTE r_CRAMDMA
+#global $21D BYTE r_SSMDMA
+#global $21E BYTE r_SAMDMA
+#global $21F BYTE r_SSMUnpackedDMA
+
+; APU registers
+#global $220 7 r_VoiceRateLo
+#global $227 1 r_APUUnused
+#global $228 7 r_VoiceRateHi
+#global $22F 1 r_NoisePeriod
+#global $230 7 r_VoiceWaveform
+#global $237 1 r_NoiseWaveform
+#global $238 7 r_VoiceVolume
+#global $23F 1 r_NoiseVolume
+
+; IO registers
+#global $240 BYTE r_Controller1
+#global $241 BYTE r_Controller2
+#global $245 BYTE r_HAM
+#global $246 BYTE r_EmuConfig
+#global $247 BYTE r_DebugPort
+
+; Bank selection
+#global $248 8 r_BankSelect
+
+; Not really registers, per se
+#global $7C00 896 r_OLTiles
+#global $7F80 112 r_OLAttributes

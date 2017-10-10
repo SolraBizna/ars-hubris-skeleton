@@ -1,0 +1,6 @@
+[submodule "ars-init"]
+	path = ars-init
+	url = https://github.com/SolraBizna/ars-init
+[submodule "hubris"]
+	path = hubris
+	url = https://github.com/SolraBizna/hubris
