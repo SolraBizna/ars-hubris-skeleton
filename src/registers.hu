@@ -38,12 +38,21 @@
 ; IO registers
 #global $240 BYTE r_Controller1
 #global $241 BYTE r_Controller2
+#global $242 BYTE r_Floppy
 #global $245 BYTE r_HAM
 #global $246 BYTE r_EmuConfig
 #global $247 BYTE r_DebugPort
 
 ; Bank selection
-#global $248 8 r_BankSelect
+#global $248 BYTE r_BankSelect8
+#global $249 BYTE r_BankSelect9
+#global $24A BYTE r_BankSelectA
+#global $24B BYTE r_BankSelectB
+#global $24C BYTE r_BankSelectC
+#global $24D BYTE r_BankSelectD
+#global $24E BYTE r_BankSelectE
+#global $24F BYTE r_BankSelectF
+#alias r_BankSelect r_BankSelect8
 
 ; Not really registers, per se
 #global $7C00 896 r_OLTiles
